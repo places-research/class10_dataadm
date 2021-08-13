@@ -1,0 +1,140 @@
+---
+title: "Tratamento dos dados dos grupos"
+subtitle: "Encontro Síncrono 10"
+author: 
+  - <br></br>Renata Oliveira
+date: '13/08/2021'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themer.css", "slides.css"]
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: solarized-light
+      countIncrementalSlides: false
+      slideNumberFormat: |
+         <div class="progress-bar-container">
+           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+           </div>
+         </div>
+
+---
+
+```{r child = "setup.Rmd"}
+```
+
+```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+loans_full_schema <- loans_full_schema %>%
+  mutate(grade = factor(grade, ordered = TRUE))
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+
+```{r xaringan-panelset, echo=FALSE, message=FALSE, warning=FALSE}
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(panel_tab_font_family = "sans-serif")
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+    error_text = "<i class=\"fa fa-times-circle\" style=\"color: #F94144\"></i>"
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+```{r xaringan-extra-styles, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{css include=FALSE}
+.panelset {
+   --panel-tab-foreground: currentColor;
+   --panel-tab-background: unset;
+   --panel-tab-active-foreground: currentColor;
+   --panel-tab-active-background: unset;
+   --panel-tab-active-border-color: currentColor;
+   --panel-tab-hover-foreground: currentColor;
+   --panel-tab-hover-background: unset;
+   --panel-tab-hover-border-color: currentColor;
+   --panel-tab-inactive-opacity: 0.5;
+   --panel-tabs-border-bottom: #ddd;
+   --panel-tab-font-family: Sen;
+   --panel-tab-background-color-active: #fffbe0;
+   --panel-tab-border-color-active: #023d4d;
+}
+
+.panelset .panel-tabs .panel-tab > a {
+	color: #023d4d;
+}
+
+.panelset .panel-tabs {
+  font-size: 0.5rem;
+}
+```
+
+
+## Grupos e projetos
+
+.small[
+**Membros:** Dani, Diego, Ita, João, Victor   
+**Tema:** Grupo Cripto Moeda   
+**Objetivo:** Realizar uma análise dos valores históricos e tendências da Criptomoeda Bitcoin   
+**Dados:** https://br.investing.com/crypto/bitcoin/btc-brl-historical-data 
+
+**Membros:** Liza, Maria Clara P., Maria Clara V. e Rodolfo   
+**Tema:** Análise de dados dos estilos musicais mais tocados durante o período de pandemia   
+**Objetivo:** analisar o estilo musical mais tocado durante a pandemia do COVID-19 na plataforma Spotify  
+**Dados:** dois períodos anuais: maio/2019 a maio/2020 e maio/2020 a maio/2021
+
+**Membros:** Gustavo Correa   
+**Tema:** BitCoin   
+**Objetivo:** Vale a pena investir em BitCoin?   
+**Dados:** Corretora Binance - Dados históricos, Gráfico de candlestick, Cenários.
+]
+
+---
+
+## Grupos e projetos
+
+.small[
+**Membros:** Enilda, Gustavo Henrique, Luís Henrique, Rayane e Wendel   
+**Tema:** Análise de demonstrações financeiras da empresa Azul S.A   
+**Objetivo:** realizar a análise dos indicadores de rentabilidade e endividamento da empresa aérea Azul nos últimos 5 anos, por meio de suas demonstrações financeiras visando identificar os impactos advindos da pandemia em sua estrutura de capital   
+**Dados:** Rentabilidade: Lucro liquido/Patrimonio liquido / Endividamento: Passivo circulante/Ativo circulante 
+
+**Membros:** Bruna Ester Azevedo, Jonatas Silva, Isabela Costa, Luisa Aguiar   
+**Tema:** E-commerce no Brasil   
+**Objetivo:** identificar os padrões da amostra de E-commerce brasileiro em questão.    
+**Dados:** Pretendemos analisar esta métrica especificamente em produtos/itens - a fim de identificar quais tipos de produto são 
+mais comumente consumidos pelo formato e-commerce. Repetições das categorias de produtos e compará-las numericamente / localização; do mesmo conjunto de dados
+
+**Membros:** Isabella Oliveira Pereira, Jefferson Alves, Natália Araíjo   
+**Tema:** Estatísticas do CoronaVirus      
+**Objetivo:** Relação entre o número de vacinados e o número de óbitos por estado   
+**Dados:** Agregação dos dados
+]
+
+---
+
+class: middle, center
+#DÚVIDAS?
