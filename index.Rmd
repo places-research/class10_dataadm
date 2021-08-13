@@ -1,6 +1,6 @@
 ---
 title: "Tratamento dos dados dos grupos"
-subtitle: "Encontro Síncrono 10"
+subtitle: "Encontro Síncrono 11"
 author: 
   - <br></br>Renata Oliveira
 date: '13/08/2021'
